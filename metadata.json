@@ -1,0 +1,6 @@
+{
+  "name": "ZI PERFUME | Luxury Fragrance Destination",
+  "description": "World-class luxury perfume shopping destination located in Bole, Addis Ababa, Ethiopia. Discover signature fragrances with fast local delivery and seamless WhatsApp ordering.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
