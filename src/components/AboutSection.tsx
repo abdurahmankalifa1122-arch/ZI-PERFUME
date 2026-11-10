@@ -2,6 +2,7 @@ import React from 'react';
 import { Logo } from './Logo';
 import { MapPin, Phone, MessageCircle, ArrowRight } from 'lucide-react';
 import { BUSINESS_PHONE_LOCAL, WHATSAPP_INTL_NUMBER } from '../utils/cart';
+import boutiqueImg from '../assets/images/boutique_luxury_interior_1794041260120.jpg';
 
 interface AboutSectionProps {
   onContactClick: () => void;
@@ -16,7 +17,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onContactClick }) =>
           <div className="lg:col-span-6 relative">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-white border border-[#E8E5DC]">
               <img
-                src="/src/assets/images/boutique_luxury_interior_1794041260120.jpg"
+                src={boutiqueImg}
                 alt="ZI PERFUME Boutique Showroom in Bole, Addis Ababa"
                 className="w-full h-[400px] sm:h-[480px] object-cover object-center"
                 referrerPolicy="no-referrer"

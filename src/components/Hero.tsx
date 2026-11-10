@@ -1,5 +1,6 @@
 import React from 'react';
 import { Sparkles, ArrowRight, ShieldCheck, MapPin } from 'lucide-react';
+import heroImg from '../assets/images/hero_luxury_perfume_1794041257491.jpg';
 
 interface HeroProps {
   onExplore: () => void;
@@ -74,7 +75,7 @@ export const Hero: React.FC<HeroProps> = ({ onExplore, onDiscover }) => {
               {/* Outer decorative luxury frame */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-white border border-[#E8E5DC]">
                 <img
-                  src="/src/assets/images/hero_luxury_perfume_1794041257491.jpg"
+                  src={heroImg}
                   alt="ZI PERFUME Luxury Campaign featuring Aura Sage with fresh botanical elements"
                   className="w-full h-[440px] sm:h-[520px] lg:h-[560px] object-cover object-center transform hover:scale-[1.02] transition-transform duration-700 ease-out"
                   loading="eager"

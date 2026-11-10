@@ -1,4 +1,10 @@
 import { FragranceCategory, Perfume } from '../types/perfume';
+import heroImg from '../assets/images/hero_luxury_perfume_1794041257491.jpg';
+import campaignImg from '../assets/images/campaign_editorial_perfume_1794041258537.jpg';
+import mensImg from '../assets/images/collection_mens_fragrance_1794041259772.jpg';
+import womensImg from '../assets/images/collection_womens_fragrance_1794041260462.jpg';
+import unisexImg from '../assets/images/collection_unisex_fragrance_1794041344356.jpg';
+import giftImg from '../assets/images/collection_gift_set_1794041344502.jpg';
 
 export interface CategoryCardData {
   id: string;
@@ -14,42 +20,42 @@ export const CATEGORIES: CategoryCardData[] = [
     name: "Men's Fragrances",
     tagline: 'Bold, structured, and distinguished',
     description: 'Distinctive accords of smoked woods, noble vetiver, and crisp aromatics designed for sophisticated presence.',
-    image: '/src/assets/images/collection_mens_fragrance_1794041259772.jpg',
+    image: mensImg,
   },
   {
     id: 'womens',
     name: "Women's Fragrances",
     tagline: 'Luminous, graceful, and captivating',
     description: 'Radiant floral bouquets, creamy amber, and delicate crystalline notes celebrating timeless elegance.',
-    image: '/src/assets/images/collection_womens_fragrance_1794041260462.jpg',
+    image: womensImg,
   },
   {
     id: 'unisex',
     name: "Unisex Fragrances",
     tagline: 'Artisanal balance beyond boundaries',
     description: 'Harmonious blends of sunlit citrus, resinous woods, and rich spices crafted to harmonize on any skin.',
-    image: '/src/assets/images/collection_unisex_fragrance_1794041344356.jpg',
+    image: unisexImg,
   },
   {
     id: 'luxury',
     name: 'Luxury Collection',
     tagline: 'Rare extraits and high perfumery',
     description: 'Masterpiece compositions enriched with precious absolutes, golden amber, and exquisite longevity.',
-    image: '/src/assets/images/campaign_editorial_perfume_1794041258537.jpg',
+    image: campaignImg,
   },
   {
     id: 'fresh-everyday',
     name: 'Fresh & Everyday',
     tagline: 'Clean, effortless, and revitalizing',
     description: 'Crisp green herbs, uplifting bergamot, and airy musk perfect for daytime refinement in Addis Ababa.',
-    image: '/src/assets/images/hero_luxury_perfume_1794041257491.jpg',
+    image: heroImg,
   },
   {
     id: 'gift',
     name: 'Gift Collection',
     tagline: 'Unforgettable gestures of luxury',
     description: 'Presented in signature emerald and champagne gold presentation coffrets, ideal for milestone celebrations.',
-    image: '/src/assets/images/collection_gift_set_1794041344502.jpg',
+    image: giftImg,
   },
 ];
 
@@ -71,7 +77,7 @@ export const SAMPLE_PERFUMES: Perfume[] = [
       { sizeMl: 50, priceEtb: 3850 },
       { sizeMl: 100, priceEtb: 5400 },
     ],
-    image: '/src/assets/images/hero_luxury_perfume_1794041257491.jpg',
+    image: heroImg,
     inStock: true,
     featured: true,
     tag: 'Signature Scent',
@@ -89,7 +95,7 @@ export const SAMPLE_PERFUMES: Perfume[] = [
       { sizeMl: 50, priceEtb: 5900 },
       { sizeMl: 100, priceEtb: 8200 },
     ],
-    image: '/src/assets/images/campaign_editorial_perfume_1794041258537.jpg',
+    image: campaignImg,
     inStock: true,
     featured: true,
     tag: 'Haute Parfumerie',
@@ -107,7 +113,7 @@ export const SAMPLE_PERFUMES: Perfume[] = [
       { sizeMl: 50, priceEtb: 4200 },
       { sizeMl: 100, priceEtb: 5950 },
     ],
-    image: '/src/assets/images/collection_mens_fragrance_1794041259772.jpg',
+    image: mensImg,
     inStock: true,
     featured: true,
     tag: 'Customer Favorite',
@@ -125,7 +131,7 @@ export const SAMPLE_PERFUMES: Perfume[] = [
       { sizeMl: 50, priceEtb: 4100 },
       { sizeMl: 100, priceEtb: 5800 },
     ],
-    image: '/src/assets/images/collection_womens_fragrance_1794041260462.jpg',
+    image: womensImg,
     inStock: true,
     featured: true,
     tag: 'Romantic Floral',
@@ -143,7 +149,7 @@ export const SAMPLE_PERFUMES: Perfume[] = [
       { sizeMl: 50, priceEtb: 4600 },
       { sizeMl: 100, priceEtb: 6500 },
     ],
-    image: '/src/assets/images/collection_unisex_fragrance_1794041344356.jpg',
+    image: unisexImg,
     inStock: true,
     featured: true,
     tag: 'Niche Artisanal',
@@ -160,7 +166,7 @@ export const SAMPLE_PERFUMES: Perfume[] = [
     sizes: [
       { sizeMl: 100, priceEtb: 9400 },
     ],
-    image: '/src/assets/images/collection_gift_set_1794041344502.jpg',
+    image: giftImg,
     inStock: true,
     featured: true,
     tag: 'Luxury Gift Set',

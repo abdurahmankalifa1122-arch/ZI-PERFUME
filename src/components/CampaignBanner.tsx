@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Sparkles } from 'lucide-react';
+import campaignImg from '../assets/images/campaign_editorial_perfume_1794041258537.jpg';
 
 interface CampaignBannerProps {
   onExplore: () => void;
@@ -11,7 +12,7 @@ export const CampaignBanner: React.FC<CampaignBannerProps> = ({ onExplore }) => 
       {/* Background Campaign Image with Cinematic Scrim */}
       <div className="absolute inset-0">
         <img
-          src="/src/assets/images/campaign_editorial_perfume_1794041258537.jpg"
+          src={campaignImg}
           alt="ZI PERFUME Cinematic Fragrance Editorial"
           className="w-full h-full object-cover object-center opacity-65 scale-105"
           referrerPolicy="no-referrer"
