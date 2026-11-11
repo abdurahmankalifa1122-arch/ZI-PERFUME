@@ -8,10 +8,18 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig(({ command }) => {
   // In development (AI Studio preview iframe), base is '/'
-  // In production (GitHub Pages deployment), base is '/ZI-PERFUME/'
-  const rawBasePath = process.env.BASE_PATH || '/ZI-PERFUME/';
-  const normalizedBase = rawBasePath.endsWith('/') ? rawBasePath : `${rawBasePath}/`;
-  const base = command === 'serve' ? '/' : normalizedBase;
+  // In production (GitHub Pages deployment), base is '/ZI-PERFUME/' or configured repository path
+  let base = '/';
+  if (command !== 'serve') {
+    const raw = process.env.BASE_PATH;
+    if (raw && raw !== '/') {
+      base = raw.endsWith('/') ? raw : `${raw}/`;
+    } else if (raw === undefined) {
+      base = '/ZI-PERFUME/';
+    } else {
+      base = '/';
+    }
+  }
 
   return {
     base,
