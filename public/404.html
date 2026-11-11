@@ -2,13 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="0; url=./" />
-    <title>ZI PERFUME</title>
+    <meta http-equiv="refresh" content="0; url=/ZI-PERFUME/" />
+    <title>ZI PERFUME | Luxury Fragrance Destination</title>
     <script>
-      window.location.replace(window.location.pathname.split('/').slice(0, -1).join('/') + '/');
+      // Single Page App redirect for GitHub Pages
+      var basePath = '/ZI-PERFUME/';
+      if (window.location.pathname !== basePath) {
+        window.location.replace(basePath);
+      }
     </script>
   </head>
   <body>
-    <p>Redirecting to <a href="./">ZI PERFUME</a>...</p>
+    <p>Redirecting to <a href="/ZI-PERFUME/">ZI PERFUME</a>...</p>
   </body>
 </html>

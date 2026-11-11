@@ -22,7 +22,12 @@ export default function App() {
   const [cartItems, setCartItems] = useState<CartItem[]>(() => {
     try {
       const saved = localStorage.getItem('zi_perfume_cart');
-      return saved ? JSON.parse(saved) : [];
+      if (!saved) return [];
+      const parsed = JSON.parse(saved);
+      if (!Array.isArray(parsed)) return [];
+      return parsed.filter(
+        (item) => item && item.cartItemId && item.perfume && typeof item.priceEtb === 'number'
+      );
     } catch {
       return [];
     }

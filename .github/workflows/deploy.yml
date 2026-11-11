@@ -36,16 +36,18 @@ jobs:
       - name: Install dependencies
         run: |
           if [ -f package-lock.json ]; then
-            npm ci
+            npm ci || npm install --legacy-peer-deps
           else
-            npm install
+            npm install --legacy-peer-deps
           fi
-
-      - name: Build website
-        run: npm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
+      - name: Build website
+        run: npm run build
+        env:
+          BASE_PATH: '/ZI-PERFUME/'
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

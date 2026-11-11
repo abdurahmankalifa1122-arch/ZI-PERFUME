@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import localLogo from '../assets/logo.png';
 
 interface LogoProps {
   className?: string;
@@ -9,8 +10,8 @@ interface LogoProps {
 export const Logo: React.FC<LogoProps> = ({ className = '', variant = 'dark', size = 'md' }) => {
   const [imageError, setImageError] = useState(false);
 
-  // Official logo provided by user
-  const logoUrl = 'https://i.ibb.co/6c0HXR85/logo.png';
+  // Use bundled official logo asset with fallback to external URL
+  const logoUrl = localLogo || 'https://i.ibb.co/6c0HXR85/logo.png';
 
   const sizeClasses = {
     sm: 'h-8',
@@ -33,7 +34,7 @@ export const Logo: React.FC<LogoProps> = ({ className = '', variant = 'dark', si
     );
   }
 
-  // Resilient elegant typographic fallback in case network restricts external images
+  // Resilient elegant typographic fallback
   const textColor = variant === 'light' ? 'text-white' : 'text-emerald-deep';
   const subColor = variant === 'light' ? 'text-gold-light' : 'text-gold';
 
